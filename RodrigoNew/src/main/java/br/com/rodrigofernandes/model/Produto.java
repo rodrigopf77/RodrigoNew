@@ -18,7 +18,7 @@ public class Produto {
 	@Column(name = "id_curso")
 	private long id;
 	
-	@Column(name= "nome_curso") //Teste de atualização do git
+	@Column(name= "nome_curso")
 	private String nome;
 	
 	@Column(name="nivel_curso")
