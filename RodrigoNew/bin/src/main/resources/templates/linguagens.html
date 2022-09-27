@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title id="servicos">Rodrigo Pacheco Fernandes</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+
+<link rel="icon" href="/imagens/icone.png">
+
+<!-- Bootstrap -->
+<link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+<link type="txt/css" rel="stylesheet" th:href="@{/css/estilo.css}">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body >
+
+	<nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
+		<div class="container">
+
+			<!-- header -->
+			<div class="navbar-header">
+
+				<!-- botao toggle -->
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#barra-navegacao">
+					<span class="sr-only">alternar navegação</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+
+				<a th:href="@{index.html}" class="navbar-brand"> <span
+					class="img-logo">Spotify</span>
+				</a>
+
+			</div>
+
+			<!-- navbar -->
+			<div class="collapse navbar-collapse" id="barra-navegacao">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="qualificacoes.html">Qualificações</a></li>
+					<li><a href="profissional.html">Profissional</a></li>
+					<li class="divisor" role="separator"></li>
+					<li><a href="projetos.html">Projetos</a></li>
+
+				</ul>
+			</div>
+
+
+
+		</div>
+		<!-- /container -->
+	</nav>
+	<!-- /nav -->
+
+	<div class="capa">
+		<div class="texto-capa">
+			<!-- <div class="imagem-perfil"><img src="imagens/eu.jpg"></div> -->
+			<br><br><br><br>
+			<h3 style='text-align: center'>Rodrigo Pacheco Fernandes</h3>
+			<h4 style='text-align: center'>Desenvolvedor Freelancer</h4>
+			<br><br>
+
+		</div>
+
+	</div>
+	<!-- Conteudos -->
+	<section id="servicos">
+		<div class="container">
+			<div class="row">
+
+					
+					<div class="card-body">
+			<a class="btn btn-sm btn-success" th:href="@{adicionar}">Cadastrar</a>
+			<div class="table-responsive">
+				<table style="background-color: white"
+					class="table table-sm table-striped table-hove table-bordered">
+					<thead>
+						<tr>
+							<th style='text-align: center'><strong>NOME</strong></th>
+							<th style='text-align: center'>TIPO</th>
+							<th style='text-align: center'>NÍVEL</th>
+							<th style='text-align: center'>DESCRIÇÃO</th>
+							<th style='text-align: center'>AÇÕES</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="linguagem : ${listaLinguagem}">
+							<td style='text-align: center' th:text="${linguagem.nomeLinguagem}">NOME</td>
+
+							<td style='text-align: center' th:text="${linguagem.tipoLinguagem}">CATEGORIA</td>
+							<td style='text-align: center' th:text="${linguagem.nivel}">NÍVEL</td>
+							<td style='text-align: center' th:text="${linguagem.descricao}">DESCRIÇÃO</td>
+							<td style='text-align: center'><a class="btn btn-sm btn-info"
+								th:href="@{/linguagem/editar/{id} (id=${linguagem.id})}">Editar</a> <a
+								class="btn btn-sm btn-danger"
+								th:href="@{/linguagem/delete/{id} (id=${linguagem.id})}"
+								th:data-confirm-delete="|Deseja realmente excluir ${linguagem.nomeLinguagem}|"
+								onclick="if (!confirm(this.getAttribute('data-confirm-delete'))) return false">Apagar</a>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+						
+
+
+
+	<section id="recursos">
+		<div class="container">
+			<div class="row">
+
+				<!-- recursos -->
+
+				
+
+
+
+			</div>
+			<!-- /row -->
+
+		</div>
+
+	</section>
+
+	<!-- Rodape -->
+	<footer class="teste" id="rodape">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-2">
+					<span class="img-logo"></span>
+				</div>
+
+				<div class="col-md-1">
+					<h4></h4>
+					<ul class="nav">
+						<li><a href="@{index.html}">Home</a></li>
+
+					</ul>
+				</div>
+
+				<div class="col-md-1">
+					<h4></h4>
+					<ul class="nav">
+						<li><a href="#">Qualificação</a></li>
+
+
+					</ul>
+				</div>
+
+				<div class="col-md-1">
+					<h4></h4>
+					<ul class="nav">
+						<li><a th:href="@{linguagens.html}">Linguagens</a></li>
+
+					</ul>
+				</div>
+
+				<div class="col-md-1">
+					<h4></h4>
+					<ul class="nav">
+						<li><a href="#">Profissional</a></li>
+
+
+					</ul>
+				</div>
+
+				<div class="col-md-1">
+					<h4></h4>
+					<ul class="nav">
+						<li><a href="#">Projetos</a></li>
+
+
+					</ul>
+				</div>
+
+				<div class="col-md-12">
+					<ul class="nav">
+						<li class="/item-rede-social"><a href=""><img
+								src="/imagens/facebook.png"></img></a></li>
+						<li class="/item-rede-social"><a href=""><img
+								src="/imagens/twitter.png"></img></a></li>
+						<li class="/item-rede-social"><a href=""><img
+								src="/imagens/instagram.png"></img></a></li>
+
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+	</footer>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

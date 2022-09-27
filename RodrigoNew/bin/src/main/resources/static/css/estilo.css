@@ -1,0 +1,211 @@
+/*
+*
+* @author Rodrigo Fernandes
+* @version 1.0
+*/
+
+/* ============================= layout ============================= */
+html, body, .capa {
+	height: 100%;
+}
+
+body {
+	background: linear-gradient(50deg, #ff4169, #7c26f8);
+	background-image: '/imagens/fundo9.jpg';
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	font-family: Helvetica, Arial, sans-serif;
+	overflow-x: hidden;
+}
+
+.teste{
+	background-image: '/imagens/fundo9.jpg';
+}
+
+h2 {
+	color: black;
+}
+
+.imgfundo {
+	background-image: '/imagens/fundo9.jpg';
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	font-family: Helvetica, Arial, sans-serif;
+	overflow-x: hidden;
+}
+
+.fundo {
+	background-color: white;
+}
+
+.fundo-util {
+	background-image: url('imagens/novas/fundo11.jpg');
+}
+
+/* -- Barra de navegação -- */
+.img-logo {
+	height: 40px;
+	width: 132px;
+	display: block;
+	background: url('/imagens/icone.png') no-repeat;
+	background-size: contain;
+	color: transparent;
+}
+
+nav.navbar-transparente {
+	padding: 15px 0px;
+	background: rgba(0, 0, 0, 0.6);
+	border: none;
+}
+
+.navbar-brand {
+	padding: 5px 15px;
+}
+
+.divisor {
+	width: 1px;
+	height: 16px;
+	background: white;
+	margin: 16px 10px;
+}
+
+.navbar-inverse .navbar-nav>li>a, footer .nav a {
+	color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, footer .nav a:hover {
+	color: #9bf0e1;
+	background: none;
+}
+
+/* -- Imagem de capa -- */
+.capa {
+	display: table;
+	width: 100%;
+}
+
+.texto-capa {
+	text-align: center;
+	color: black;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.texto-titulo-secao {
+	text-align: center;
+	color: black;
+	text-transform: uppercase;
+}
+
+.texto-branco {
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+}
+
+.texto-branco-texto-normal {
+	text-align: center;
+	color: white;
+}
+
+.texto-detalhes {
+	text-align: center;
+	color: black;
+}
+
+/* -- Secao servico-- */
+#servicos {
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.albuns {
+	padding: 10px 0px 10px 0px;
+}
+
+/* -- recursos-- */
+#recursos {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: white;
+}
+
+.texto-preto {
+	text-align: center;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.conteudo-preto {
+	font: 0000;
+}
+
+/* -- rodape -- */
+footer {
+	background: #000;
+	padding: 50px 0px 20px 0px;
+	position: relative;
+}
+
+.item-rede-social {
+	float: right;
+}
+
+.imagem-perfil {
+	border-radius: 500px;
+	float: left;
+	padding-left: 80px;
+	padding-top: 80px;
+}
+
+.rotacionar {
+	transform: rotate(30deg);
+	-ms-transform: rotate(30deg); /* IE 9*/
+	-webkit-transform: rotate(30deg); /*Chrome, Safari, Opera */
+	padding-left: 80px;
+}
+
+.item-qualificacoes {
+	color: blue;
+	text-transform: uppercase;
+}
+
+/* ============================= Tipografia ============================= */
+h1 {
+	font-size: 100px;
+	font-weight: 900px;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+	color: black;
+}
+
+.h5 {
+	font-size: 20px;
+	font-weight: 900px;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+	color: black;
+}
+
+h2 {
+	font-sizfla: 50px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+h3 {
+	font-size: 35px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+#rodape h4 {
+	color: #919496;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+#servicos {
+	color: black;
+}

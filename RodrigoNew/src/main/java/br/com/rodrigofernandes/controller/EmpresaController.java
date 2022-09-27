@@ -34,7 +34,7 @@ public class EmpresaController {
 	@RequestMapping("listar")
 	public String home(Model model) {
 		List<Empresa> listaEmpresas = eService.todos();
-		model.addAttribute("listaEmpresa", listaEmpresas);
+		model.addAttribute("li staEmpresa", listaEmpresas);
 		return "empresa";
 	}
 	
