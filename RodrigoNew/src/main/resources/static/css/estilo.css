@@ -19,7 +19,7 @@ body {
 }
 
 .teste{
-	background-image: '/imagens/fundo9.jpg';
+	background-image: '/imagens/novas/fundo11.jpg';
 }
 
 h2 {
@@ -27,7 +27,7 @@ h2 {
 }
 
 .imgfundo {
-	background-image: '/imagens/fundo9.jpg';
+	background-image: '/imagens/novas/fundo11.jpg';
 	background-size: 100% 100%;
 	background-attachment: fixed;
 	font-family: Helvetica, Arial, sans-serif;
