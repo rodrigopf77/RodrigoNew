@@ -29,6 +29,7 @@
 	  <a class="nav-link" th:href="@{/empresa/listar}"><strong>HOME</strong></a>
 	  <a class="nav-link" th:href="@{/empresa/listar}"><strong>FORMAÇÃO</strong></a>
 	  <a class="nav-link" th:href="@{/curso/listar}"><strong>CURSOS</strong></a>
+	  <a class="nav-link" th:href="@{/linguagem/listar}"><strong>LINGUAGENS / FRAMEWORKS</strong></a>
 	  <a class="nav-link" th:href="@{/empresa/listar}"><strong>EXPERIÊNCIAS	- PROFISSIONAIS</strong></a>
 	</nav>
 
@@ -58,15 +59,15 @@
 						<tr th:each="empresa : ${listaEmpresa}">
 							<td style='text-align: center' th:text="${empresa.id}">ID</td>
 
-							<td th:text="${empresa.nome}">NOME</td>
-							<td th:text="${empresa.nomeFantasia}">NOME</t
+							<td th:text="${empresa.nome}">RAZÃO SOCIAL</td>
+							<td th:text="${empresa.nomeFantasia}">NOME FANTASIA</td>
 							<td th:text="${empresa.segmento}">SEGMENTO</td>
 							<td style='text-align: center' th:text="${empresa.estado}">ESTADO</td>
 							<td style='text-align: center'><a class="btn btn-sm btn-info"
 								th:href="@{/empresa/editar/{id} (id=${empresa.id})}">Editar</a> <a
 								class="btn btn-sm btn-danger"
 								th:href="@{/empresa/delete/{id} (id=${empresa.id})}"
-								th:data-confirm-delete="|Deseja realmente excluir ${empresa.nome}|"
+								th:data-confirm-delete="|Deseja realmente excluir ${empresa.nomeFantasia}|"
 								onclick="if (!confirm(this.getAttribute('data-confirm-delete'))) return false">Apagar</a>
 							</td>
 						</tr>
