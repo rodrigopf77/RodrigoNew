@@ -47,7 +47,8 @@
 					<thead>
 						<tr>
 							<th style='text-align: center'><strong>ID</strong></th>
-							<th style='text-align: center'>NOME</th>
+							<th style='text-align: center'>RAZÃO SOCIAL</th>
+							<th style='text-align: center'>NOME FANTASIA</th>
 							<th style='text-align: center'>SEGMENTO</th>
 							<th style='text-align: center'>ESTADO</th>
 							<th style='text-align: center'>Ações</th>
@@ -58,6 +59,7 @@
 							<td style='text-align: center' th:text="${empresa.id}">ID</td>
 
 							<td th:text="${empresa.nome}">NOME</td>
+							<td th:text="${empresa.nomeFantasia}">NOME</t
 							<td th:text="${empresa.segmento}">SEGMENTO</td>
 							<td style='text-align: center' th:text="${empresa.estado}">ESTADO</td>
 							<td style='text-align: center'><a class="btn btn-sm btn-info"

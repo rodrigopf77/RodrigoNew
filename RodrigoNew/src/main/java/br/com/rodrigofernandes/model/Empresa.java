@@ -16,6 +16,7 @@ public class Empresa {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
+	private String nomeFantasia;
 	private String segmento;
 	private String estado;
 	
@@ -52,6 +53,14 @@ public class Empresa {
 
 	public void setEstado(String estado) {
 		this.estado = estado;
+	}
+	
+	public String getNomeFantasia() {
+		return nomeFantasia;
+	}
+
+	public void setNomeFantasia(String nomeFantasia) {
+		this.nomeFantasia = nomeFantasia;
 	}
 
 	@Override
