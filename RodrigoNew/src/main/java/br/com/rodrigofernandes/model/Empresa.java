@@ -23,6 +23,9 @@ public class Empresa {
 	@OneToMany(targetEntity = Produto.class, mappedBy = "instituicao", fetch = FetchType.LAZY)
 	private List<Produto> curso;
 
+	@OneToMany(targetEntity = Produto.class, mappedBy = "instituicao", fetch = FetchType.LAZY)
+	private List<ExperienciaProfissional> experiencias;
+	
 	public Long getId() {
 		return id;
 	}
