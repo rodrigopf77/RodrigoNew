@@ -24,6 +24,9 @@ public class Produto {
 	@Column(name="nivel_curso")
 	private String nivel;
 	
+	//mappedBy reference an unknown target entity property: br.com.rodrigofernandes.model.Produto.empresa 
+		//in br.com.rodrigofernandes.model.Empresa.experiencias
+	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="curso_empresa_id", referencedColumnName = "id")
 	private Empresa instituicao;
@@ -59,7 +62,4 @@ public class Produto {
 	public void setInstituicao(Empresa instituicao) {
 		this.instituicao = instituicao;
 	}
-	
-	
-
 }

@@ -17,7 +17,7 @@ import br.com.rodrigofernandes.service.EmpresaService;
 import br.com.rodrigofernandes.service.ProfissionalService;
 
 @Controller
-@RequestMapping("/profissional")
+@RequestMapping("/experiencia")
 public class ExperienciaProfissionalController {
 	
 	@Autowired
@@ -40,14 +40,14 @@ public class ExperienciaProfissionalController {
 	@RequestMapping(value = "save", method = RequestMethod.POST)
 	public String salvar(ExperienciaProfissional experiencia) {
 		pService.save(experiencia);
-		return "redirect:/profissional/listar";
+		return "redirect:/experiencia/listar";
 	}
 	
 	@RequestMapping("listar")
 	public String home(Model model) {
 		List<ExperienciaProfissional> listaExperiencias = pService.todos();
-		model.addAttribute("listaExperiencias", listaExperiencias);
-		return "profissional";
+		model.addAttribute("listaExperiencia", listaExperiencias);
+		return "experiencias";
 	}
 	
 	@RequestMapping("editar/{id}")
@@ -59,7 +59,7 @@ public class ExperienciaProfissionalController {
 	public ModelAndView delete(@PathVariable("id") Long id) {
 		pService.excluirExperiencia(id);
 		
-		ModelAndView mv = new ModelAndView("redirect:/profissionalS/listar");
+		ModelAndView mv = new ModelAndView("redirect:/experiencia/listar");
 		
 		return mv;
 	}

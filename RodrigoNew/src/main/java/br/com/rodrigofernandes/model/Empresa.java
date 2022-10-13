@@ -23,7 +23,7 @@ public class Empresa {
 	@OneToMany(targetEntity = Produto.class, mappedBy = "instituicao", fetch = FetchType.LAZY)
 	private List<Produto> curso;
 
-	@OneToMany(targetEntity = Produto.class, mappedBy = "instituicao", fetch = FetchType.LAZY)
+	@OneToMany(targetEntity = ExperienciaProfissional.class, mappedBy = "empresa", fetch = FetchType.LAZY)
 	private List<ExperienciaProfissional> experiencias;
 	
 	public Long getId() {

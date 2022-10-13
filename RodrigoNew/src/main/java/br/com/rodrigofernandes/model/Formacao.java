@@ -1,5 +1,7 @@
 package br.com.rodrigofernandes.model;
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -9,32 +11,24 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import groovy.transform.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-
 @Entity
-public class ExperienciaProfissional {
+public class Formacao {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
-	@Column(name = "id_experiencia")
+	@Column(name = "id_formacao")
 	private long id;
 	
-	@Column(name= "cargo")
-	private String cargo;
-	
-	@Column(name= "funcao")
-	private String funcao;
-	
-	//mappedBy reference an unknown target entity property: br.com.rodrigofernandes.model.Produto.empresa 
-	//in br.com.rodrigofernandes.model.Empresa.experiencias
+	@Column(name= "formacao")
+	private String formacao;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="experiencia_empresa_id", referencedColumnName = "id")
 	private Empresa empresa;
 	
+	private LocalDate ano;
+
 	public long getId() {
 		return id;
 	}
@@ -43,20 +37,12 @@ public class ExperienciaProfissional {
 		this.id = id;
 	}
 
-	public String getCargo() {
-		return cargo;
+	public String getFormacao() {
+		return formacao;
 	}
 
-	public void setCargo(String cargo) {
-		this.cargo = cargo;
-	}
-
-	public String getFuncao() {
-		return funcao;
-	}
-
-	public void setFuncao(String funcao) {
-		this.funcao = funcao;
+	public void setFormacao(String formacao) {
+		this.formacao = formacao;
 	}
 
 	public Empresa getEmpresa() {
@@ -66,5 +52,15 @@ public class ExperienciaProfissional {
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
 	}
+
+	public LocalDate getAno() {
+		return ano;
+	}
+
+	public void setAno(LocalDate ano) {
+		this.ano = ano;
+	}
+	
+	
 
 }
