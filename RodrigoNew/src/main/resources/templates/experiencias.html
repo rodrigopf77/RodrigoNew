@@ -69,14 +69,14 @@
 						<tr th:each="experiencia : ${listaExperiencia}">
 							<td style='text-align: center' th:text="${experiencia.id}">CÓDIGO</td>
 							<td th:text="${experiencia.empresa.nomeFantasia}">EMPRESA</td>
-							<td style='text-align: center 'th:text="${experiencia.cargo}">CARGO</td>
-							<td style='text-align: center 'th:text="${experiencia.funcao}">FUNÇÃO</td>
+							<td th:text="${experiencia.cargo}">CARGO</td>
+							<td th:text="${experiencia.funcao}">FUNÇÃO</td>
 							<td style='text-align: center'><a
 								class="btn btn-sm btn-info"
-								th:href="@{/experiencia/editar/{id} (id=${experiencia.id})}">Editar</a></br><hr><a
+								th:href="@{/experiencia/editar/{id} (id=${experiencia.id})}">Editar</a><hr><a
 								class="btn btn-sm btn-danger"
 								th:href="@{/experiencia/delete/{id} (id=${experiencia.id})}"
-								th:data-confirm-delete="|Deseja realmente excluir ${experiencia.empresa}|"
+								th:data-confirm-delete="|Deseja realmente excluir ${experiencia.empresa.nomeFantasia}|"
 								onclick="if (!confirm(this.getAttribute('data-confirm-delete'))) return false">Apagar</a>
 							</td>
 						</tr>

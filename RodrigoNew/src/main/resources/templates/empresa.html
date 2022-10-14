@@ -64,7 +64,7 @@
 							<td th:text="${empresa.segmento}">SEGMENTO</td>
 							<td style='text-align: center' th:text="${empresa.estado}">ESTADO</td>
 							<td style='text-align: center'><a class="btn btn-sm btn-info"
-								th:href="@{/empresa/editar/{id} (id=${empresa.id})}">Editar</a> <a
+								th:href="@{/empresa/editar/{id} (id=${empresa.id})}">Editar</a> | <a
 								class="btn btn-sm btn-danger"
 								th:href="@{/empresa/delete/{id} (id=${empresa.id})}"
 								th:data-confirm-delete="|Deseja realmente excluir ${empresa.nomeFantasia}|"

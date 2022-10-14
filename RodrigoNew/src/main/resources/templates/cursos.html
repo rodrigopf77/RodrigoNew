@@ -42,12 +42,75 @@
       </div>
       
     </div>
-	
+    
+    
+    <div class="card imgfundo"
+		style="padding: 20px; background-color: #F8F8FF">
+		<div class="card-header" style="background-color: white">
+			<strong></strong>
+			<h1 style='text-align: center'>FORMAÇÃO</h1>
+		</div>
+
+		<div class="card-body">
+			<a style='text-align: center' class="btn btn-sm btn-success"
+				th:href="@{adicionar}">Cadastrar</a><br>
+			<div class="table-responsive">
+				<table style="background-color: white"
+					class="table table-sm table-striped table-hove table-bordered">
+					<thead>
+						<tr>
+							<th style='text-align: center'><strong>ID</strong></th>
+							<th style='text-align: center'>CURSO</th>
+							<th style='text-align: center'>NÍVEL</th>
+							<th style='text-align: center'>INSTITUIÇÃO</th>
+							<th style='text-align: center'>AÇÕES</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="curso : ${listaCurso}">
+							<td style='text-align: center' th:text="${curso.id}">ID
+								HOSPEDE</td>
+							<td th:text="${curso.nome}">NOME</td>
+							<td style='text-align: center' th:text="${curso.nivel}">NÍVEL</td>
+							<td style='text-align: center'
+								th:text="${curso.instituicao.nome}">INSTITUIÇÃO</td>
+							<td style='text-align: center'><a
+								class="btn btn-sm btn-info"
+								th:href="@{/curso/editar/{id} (id=${curso.id})}">Editar</a> <a
+								class="btn btn-sm btn-danger"
+								th:href="@{/curso/delete/{id} (id=${curso.id})}"
+								th:data-confirm-delete="|Deseja realmente excluir ${curso.nome}|"
+								onclick="if (!confirm(this.getAttribute('data-confirm-delete'))) return false">Apagar</a>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 	<div class="card imgfundo"
 		style="padding: 20px; background-color: #F8F8FF">
 		<div class="card-header" style="background-color: white">
 			<strong></strong>
-			<h1 style='text-align: center'>LISTA DE CURSOS</h1>
+			<h1 style='text-align: center'>QUALIFICAÇÕES</h1>
 		</div>
 
 		<div class="card-body">
