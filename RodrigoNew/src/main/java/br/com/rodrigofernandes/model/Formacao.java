@@ -1,7 +1,5 @@
 package br.com.rodrigofernandes.model;
 
-import java.time.LocalDate;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -27,7 +25,7 @@ public class Formacao {
 	@JoinColumn(name="experiencia_empresa_id", referencedColumnName = "id")
 	private Empresa empresa;
 	
-	private LocalDate ano;
+	/*private LocalDate ano;*/
 
 	public long getId() {
 		return id;
@@ -53,13 +51,13 @@ public class Formacao {
 		this.empresa = empresa;
 	}
 
-	public LocalDate getAno() {
+	/*public LocalDate getAno() {
 		return ano;
 	}
 
 	public void setAno(LocalDate ano) {
 		this.ano = ano;
-	}
+	}*/
 	
 	
 
