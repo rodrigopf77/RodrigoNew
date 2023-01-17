@@ -1,5 +1,6 @@
 package br.com.rodrigofernandes.controller;
 
+//teste
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ public class FormacaoController {
 		@RequestMapping("adicionar")
 		public ModelAndView addFormacao(Formacao formacao) {
 			ModelAndView mv = new ModelAndView();
-			mv.setViewName("cadastrarformacao");
+			mv.setViewName("cadastrarformacao"); 
 			mv.addObject("formacao", formacao);
 
 			List<Empresa> empresas = eService.todos();
